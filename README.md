@@ -1,4 +1,4 @@
-# ITIROD 6th term labs
+# ITIROD 6th term labs (Лапытько Антон 953505)
 
 ### This project is a clone of the telegram messager without using bootstrap and any js frameworks
 
