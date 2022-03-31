@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">    
+    <meta charset="UTF-8">
     <title>Telegram Web</title>
-    <link rel="stylesheet" href="room.css">    
+    <link rel="stylesheet" href="room.css">
 </head>
+
 <body>
 
     <div class="container">
@@ -12,26 +14,31 @@
         <div class="left">
 
             <div class="menu" id="menu">
-                <h4 class="telegram-text">Telegram</h4>
+                <h1 class="telegram-text">Telegram</h1>
                 <div class="menu-btn" id="menu-btn">
-                    <span class="btn-line"></span>                       
+                    <span class="btn-line"></span>
                 </div>
-                
+
                 <span class="menu-list" id="menu-list">
                     <ul>
-                        <li class="listsame">New group
+                        <li class="listsame">
+                            <a>New group</a>
                             <img class="listimg1" src="./image/new_group.png" alt="">
                         </li>
-                        <li class="listsame">Contacts
+                        <li class="listsame">
+                            <a>Contacts</a>
                             <img class="listimg2" src="./image/contacts.png" alt="">
                         </li>
-                        <li class="listsame">Settings
+                        <li class="listsame">
+                            <a>Settings</a>
                             <img class="listimg3" src="./image/settings.png" alt="">
                         </li>
-                        <li class="listsame">Telegram FAQ
+                        <li class="listsame">
+                            <a>Telegram FAQ</a>
                             <img class="listimg4" src="./image/faq.png" alt="">
                         </li>
-                        <li class="listsame">About
+                        <li class="listsame">
+                            <a>About</a>
                             <img class="listimg5" src="./image/about.png" alt="">
                         </li>
                     </ul>
@@ -42,22 +49,24 @@
 
             <div class="search">
                 <span class=middle>
-                    <img class="searchimg" src="./image/search.png" alt="search">
+                    <button>
+                        <img class="searchimg" src="./image/search.png" alt="search">
+                    </button>
                     <input class=searchinput type="text" placeholder="Search">
                 </span>
-                    
+
             </div>
             <div class="contacts">
-                <div class="contact">
-                    <img class="contactimg" src="./image/pavel.jpg" alt="pavel">
+                <div class="contact">                    
+                    <img class="contactimg" src="./image/pavel.jpg" alt="pavel">                    
                     <span class="contactname">Pavel Durov</span>
                     <span class="contacttime">12:41:23 PM</span>
                     <span class="contacttext">
-                         Welcome to Telegram
+                        Welcome to Telegram
                     </span>
                 </div>
-                    
-                    
+
+
             </div>
 
         </div>
@@ -71,53 +80,70 @@
                         Pavel Durov
                     </span>
                     <span class="search-icon">
-                        <img id=rightside src="./image/search_white.png" alt="search">
+                        <button>
+                            <img id=rightside src="./image/search_white.png" alt="search">
+                        </button>
                     </span>
                     <span class="more">
-                        <div class="more-btn"><img id="threedot" src="./image/three_dot.png" alt="more"></div>                        
+                        <div class="more-btn"><img id="threedot" src="./image/three_dot.png" alt="more"></div>
                     </span>
                 </div>
-            </div>   
-            
+            </div>
 
-            <div class="message-container"> 
+
+            <div class="message-container">
                 <div class="message-friend">
-    
-                        <span class="img-main"><img class="message-img" src="./image/pavel.jpg" alt="pavel"></span>
-                        <span class="message-name" >Pavel Durov</span>
-                        <span class="message-time">17 Oct 12:41</span>
-                        <div class="message">
-                            Congratulations! You are my favorite student.
-                        </div>
-                        
+
+                    <span class="img-main"><img class="message-img" src="./image/pavel.jpg" alt="pavel"></span>
+                    <span class="message-name">Pavel Durov</span>
+                    <span class="message-time">17 Oct 12:41</span>
+                    <div class="message">
+                        Congratulations! You are my favorite student.
+                    </div>
+
                 </div>
-    
+
             </div>
 
 
 
             <form id="control-chat">
                 <div id="chatinput">
-                    <input id="input2" type="text" name="message" placeholder="Write a message..." size="51" autocomplete="off" required>
+                    <input id="input2" type="text" name="message" placeholder="Write a message..." size="51"
+                        autocomplete="off" required>
                     <span id="chatinputimg">
-                        <img id="smileimg" src="./image/smile.png" alt="smile">                        
-                        <img id="inputsticker"  src="./image/sticker.png" alt="sticker">
-                    </span>    
+                        <img id="smileimg" src="./image/smile.png" alt="smile">
+                        <img id="inputsticker" src="./image/sticker.png" alt="sticker">
+                    </span>
                 </div>
-                <div id="moreimages">                    
-                    <img id="documentimg" src="./image/document.png" alt="document">                    
-                    <img id="photoimg"  src="./image/photo.png" alt="photo">
-                    <img id="audio_grayimg"  src="./image/audio_gray.png" alt="audio">
+                <div id="moreimages">
+                    <img id="documentimg" src="./image/document.png" alt="document">
+                    <img id="photoimg" src="./image/photo.png" alt="photo">
+                    <img id="audio_grayimg" src="./image/audio_gray.png" alt="audio">
                 </div>
-    
+
                 <div id="emojiimages">
-                    <img id="emoji1"  src="./image/tears_of_joy_emoji.png" alt="tears_of_joy_emoji">
-                    <img id="emoji2"  src="./image/blow_kiss_emoji.png" alt="blow_kiss_emoji">
-                    <img id="emoji3"  src="./image/sunglasses_emoji.png" alt="sunglasses_emoji">
-                    <img id="emoji4"  src="./image/heart_eyes_emoji.png" alt="heart_eyes_emoji">
-                    <img id="emoji5"  src="./image/shyly _smiling_emoji.png" alt="shyly _smiling_emoji">
-                    <img id="emoji6"  src="./image/grinning_emoji.png" alt="grinning_emoji">
-                    <img id="emoji7"  src="./image/thumbs_up_emoji.png" alt="thumbs_up_emoji">
+                    <button>
+                        <img id="emoji1" src="./image/tears_of_joy_emoji.png" alt="tears_of_joy_emoji">
+                    </button>
+                    <button>
+                        <img id="emoji2" src="./image/blow_kiss_emoji.png" alt="blow_kiss_emoji">
+                    </button>
+                    <button>
+                        <img id="emoji3" src="./image/sunglasses_emoji.png" alt="sunglasses_emoji">
+                    </button>
+                    <button>
+                        <img id="emoji4" src="./image/heart_eyes_emoji.png" alt="heart_eyes_emoji">                    
+                    </button>
+                    <button>
+                        <img id="emoji5" src="./image/shyly _smiling_emoji.png" alt="shyly _smiling_emoji">
+                    </button>
+                    <button>
+                        <img id="emoji6" src="./image/grinning_emoji.png" alt="grinning_emoji">
+                    </button>
+                    <button>
+                        <img id="emoji7" src="./image/thumbs_up_emoji.png" alt="thumbs_up_emoji">
+                    </button>
                 </div>
 
                 <div id="sendbtn">
@@ -129,8 +155,9 @@
 
 
         </div>
-        
+
     </div>
-    
+
 </body>
+
 </html>
