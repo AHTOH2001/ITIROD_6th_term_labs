@@ -288,11 +288,13 @@ input:focus {
   color: white;
 }
 
-img#rightside {
+button#rightside {
   width: 43px;
+  height: 43px;
   opacity: 1;
-  transform: translateY(5px);
+  transform: translateY(-10px);
   padding-left: 1px;
+  border: 0px;
 }
 
 .search-icon:hover {
@@ -496,9 +498,12 @@ div.message {
 #emoji5,
 #emoji6,
 #emoji7 {
-  object-fit: contain;
-  width: 40px;
-  margin-right: -11px;
+  /* object-fit: contain; */
+  width: 27px;    
+  margin-right: 5px;
+  margin-bottom: -9px;  
+  border: 0px;
+  cursor: pointer;
 }
 
 .send-btn {
