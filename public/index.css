@@ -12,6 +12,12 @@ body {
   text-align: center;
 }
 
+#main-form {  
+  margin: auto;
+  /* position: relative; */
+  text-align: center;
+}
+
 #bottom {
   background-color: rgb(231, 238, 236);
   height: 100vh;
@@ -60,8 +66,8 @@ img {
 
 #nextroom {
   color: white;
-  transform: translateY(-19px);
-  margin-left: 234px;
+  transform: translateY(-60px);
+  margin-left: 150px;
   display: inline-block;
   font-size: 14px;
   font-family: sans-serif;
