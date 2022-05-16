@@ -109,8 +109,7 @@ body {
   /* display: none; */
   z-index: 10;
   color: rgba(10, 71, 121, 0.9);
-  background-color: white;
-  width: 312px;
+  background-color: white;  
   height: 250px;
   line-height: 40px;
   font-family: sans-serif;
@@ -179,7 +178,7 @@ input:focus {
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  margin-top: 70%;
+  margin-top: 65%;
 }
 
 .contact:hover {

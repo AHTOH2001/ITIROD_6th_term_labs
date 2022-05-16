@@ -114,8 +114,7 @@ button:focus {
   font-size: 16px;
 }
 
-#please {
-  margin-top: 50px;
+#please {  
   margin-left: -100px;
   opacity: 0.6;
   font-family: sans-serif;
