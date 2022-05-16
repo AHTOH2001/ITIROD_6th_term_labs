@@ -1,20 +1,18 @@
-import { db } from './firebase.js'
-import { collection, addDoc, getDocs  } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-firestore.js"; 
 
-// try {
-//   const docRef = await addDoc(collection(db, "users"), {
-//     first: "Alan",
-//     middle: "Mathison",
-//     last: "Turing",
-//     born: 1912
+// db.collection("users").add({
+//   first: "AdaNEW",
+//   last: "Lovelace",
+//   born: 1815
+// })
+//   .then((docRef) => {
+//     console.log("Document written with ID: ", docRef.id);
+//   })
+//   .catch((error) => {
+//     console.error("Error adding document: ", error);
 //   });
 
-//   console.log("Document written with ID: ", docRef.id);
-// } catch (e) {
-//   console.error("Error adding document: ", e);
-// }
-
-const querySnapshot = await getDocs(collection(db, "users"));
-querySnapshot.forEach((doc) => {
-  console.log(`${doc.id} => ${JSON.stringify(doc.data())}`);
+  db.collection("users").get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+        console.log(`${doc.id} => ${JSON.stringify(doc.data())}`);
+    });
 });

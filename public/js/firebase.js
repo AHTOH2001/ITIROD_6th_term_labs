@@ -1,6 +1,3 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-firestore.js";
-
 const firebaseConfig = {
     apiKey: "AIzaSyDJE4LjMmLonQ-XZL8QYrn4ECKSMqaVdOk",
     authDomain: "itirod-proj.firebaseapp.com",
@@ -11,5 +8,5 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-export const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
