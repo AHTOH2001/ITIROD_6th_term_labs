@@ -6,7 +6,7 @@ function sign_in() {
     if (doc.exists) {
       console.log("Document data:", doc.data());
       localStorage.setItem('username', username);
-      window.location.replace('room.html');
+      location.href = 'room.html'
     } else {
       console.log("No such user!");
       alert(`New user with nickname ${username} has been created`)
@@ -16,7 +16,7 @@ function sign_in() {
         .then(() => {
           console.log("User successfuly created");
           localStorage.setItem('username', username);
-          window.location.replace('room.html');
+          location.href = 'room.html'
         })
         .catch((error) => {
           console.error("Error creating user: ", error);
