@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Telegram Web</title>
+    <link rel="stylesheet" href="css/room.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <aside class="left">
+
+            <div class="menu" id="menu">
+                <h1 class="telegram-text">Telegram</h1>
+                <div class="menu-btn" id="menu-btn" onclick="toggle_menu()">
+                    <span class="btn-line"></span>
+                </div>
+
+                <ul class="menu-list" id="menu-list">
+                    <li class="listsame">
+                        <a>
+                            <img class="listimg1" src="./image/new_group.png" alt="">
+                            New group
+                        </a>
+                    </li>
+                    <li class="listsame">
+                        <a>
+                            <img class="listimg2" src="./image/contacts.png" alt="">
+                            Contacts
+                        </a>
+                    </li>
+                    <li class="listsame">
+                        <a>
+                            <img class="listimg3" src="./image/settings.png" alt="">
+                            Settings
+                        </a>
+                    </li>
+                    <li class="listsame">
+                        <a>
+                            <img class="listimg4" src="./image/faq.png" alt="">
+                            Telegram FAQ
+                        </a>
+                    </li>
+                    <li class="listsame">
+                        <a>
+                            <img class="listimg5" src="./image/about.png" alt="">
+                            About
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+            <section class="contacts">
+                <div class="contact">
+                    <img class="contactimg" src="./image/pavel.jpg" alt="pavel">
+                    <span class="contactname">Pavel Durov</span>
+                    <datetime class="contacttime">12:41:23 PM</datetime>
+                    <span class="contacttext">
+                        Welcome to Telegram
+                    </span>
+                </div>
+
+
+            </section>
+
+        </aside>
+
+
+        <main class="right">
+            <div class="navright">
+                <div class="divider"></div>
+                <div class="nav-right">
+                    <span class="names">
+                        Pavel Durov
+                    </span>
+                    <span class="search-icon">
+                        <button id=rightside class="searchimg"
+                            style="background: url(./image/search_white.png); background-size: cover">
+                        </button>
+                    </span>
+                    <span class="more">
+                        <div class="more-btn"><img id="threedot" src="./image/three_dot.png" alt="more"></div>
+                    </span>
+                </div>
+            </div>
+
+
+            <div class="message-container">
+                <div class="message-friend">
+
+                    <span class="img-main"><img class="message-img" src="./image/pavel.jpg" alt="pavel"></span>
+                    <span class="message-name">Pavel Durov</span>
+                    <datetime class="message-time">17 Oct 12:41</datetime>
+                    <div class="message">
+                        Congratulations! You are my favorite student.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <form id="control-chat" onsubmit="return send_message()">
+                <div id="chatinput">
+                    <input id="input2" type="textarea" name="message" placeholder="Write a message..." size="51"
+                        autocomplete="off" required>
+                    <span id="chatinputimg">
+                        <img id="smileimg" src="./image/smile.png" alt="smile">
+                        <img id="inputsticker" src="./image/sticker.png" alt="sticker">
+                    </span>
+                </div>
+                <div id="moreimages">
+                    <img id="documentimg" src="./image/document.png" alt="document">
+                    <img id="photoimg" src="./image/photo.png" alt="photo">
+                    <img id="audio_grayimg" src="./image/audio_gray.png" alt="audio">
+                </div>
+
+                <div id="emojiimages">
+                    <button id="emoji1" type="button" onclick="add_symbol('😂')"
+                        style="background: url(./image/tears_of_joy_emoji.png); background-size: cover">
+                    </button>
+                    <button id="emoji2" type="button" onclick="add_symbol('😘')"
+                        style="background: url(./image/blow_kiss_emoji.png); background-size: cover">
+                    </button>
+                    <button id="emoji3" type="button" onclick="add_symbol('😎')"
+                        style="background: url(./image/sunglasses_emoji.png); background-size: cover">
+                    </button>
+                    <button id="emoji4" type="button" onclick="add_symbol('😍')"
+                        style="background: url(./image/heart_eyes_emoji.png); background-size: cover">
+                    </button>
+                    <button id="emoji5" type="button" onclick="add_symbol('😊')"
+                        style="background: url(./image/shyly_smiling_emoji.png); background-size: cover">
+                    </button>
+                    <button id="emoji6" type="button" onclick="add_symbol('😀')"
+                        style="background: url(./image/grinning_emoji.png); background-size: cover">
+                    </button>
+                    <button id="emoji7" type="button" onclick="add_symbol('👍')"
+                        style="background: url(./image/thumbs_up_emoji.png); background-size: cover">
+                    </button>
+                </div>
+
+                <div id="sendbtn">
+                    <button type="submit" class="send-btn">
+                        SEND
+                    </button>
+                </div>
+            </form>
+
+
+        </main>
+
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/room.js"></script>        
+</body>
+
+</html>
