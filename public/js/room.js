@@ -15,8 +15,8 @@ function toggle_menu() {
 
 function send_message() {
   var message_container = document.getElementsByClassName("message-container")[0]
-  var message = document.getElementsByClassName("message-friend")[0]
-  message = message.cloneNode(true)
+  var original_message = document.getElementsByClassName("message-friend")[0]
+  message = original_message.cloneNode(true)
 
   var input = document.getElementById('input2')
 
@@ -39,8 +39,46 @@ function send_message() {
   message_time.textContent = `${da} ${mo} ${time}`
 
   message_container.insertAdjacentElement('beforeend', message)
-
   message_container.scroll(0, message_container.scrollHeight)
+
+  if (document.getElementsByClassName("message").length == 2) {
+    setTimeout(() => {
+      message = original_message.cloneNode(true)
+
+      var message_content = message.getElementsByClassName('message')[0]
+      message_content.textContent = 'Yes, indeed! I totally agree with you that this lab is perfect'
+
+      var message_time = message.getElementsByClassName('message-time')[0]
+      var d = new Date(Date.now())
+      let time = new Intl.DateTimeFormat('en', { hour: '2-digit', minute: 'numeric', hour12: false }).format(d)
+      let mo = new Intl.DateTimeFormat('en', { month: 'short' }).format(d)
+      let da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d)
+      message_time.textContent = `${da} ${mo} ${time}`
+
+      message_container.insertAdjacentElement('beforeend', message)
+      message_container.scroll(0, message_container.scrollHeight)
+    }, 2000)
+  }
+
+  if (document.getElementsByClassName("message").length == 8) {
+    setTimeout(() => {
+      message = original_message.cloneNode(true)
+
+      var message_content = message.getElementsByClassName('message')[0]
+      message_content.textContent = 'Yep, auto scroll to the bottom is also works.'
+
+      var message_time = message.getElementsByClassName('message-time')[0]
+      var d = new Date(Date.now())
+      let time = new Intl.DateTimeFormat('en', { hour: '2-digit', minute: 'numeric', hour12: false }).format(d)
+      let mo = new Intl.DateTimeFormat('en', { month: 'short' }).format(d)
+      let da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d)
+      message_time.textContent = `${da} ${mo} ${time}`
+
+      message_container.insertAdjacentElement('beforeend', message)
+      message_container.scroll(0, message_container.scrollHeight)
+    }, 2000)
+  }
+
   return false
 }
 
