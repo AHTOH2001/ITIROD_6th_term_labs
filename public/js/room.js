@@ -1,26 +1,24 @@
 function toggle_menu() {
-  var menu = document.getElementById("menu-list");
-  var contacts = document.getElementsByClassName("contacts")[0];
+  var menu = document.getElementById("menu-list")
+  var contacts = document.getElementsByClassName("contacts")[0]
   if (menu.style.display === "block") {
-    menu.style.display = "none";
+    menu.style.display = "none"
     contacts.style.margin = "0"
   } else {
-    menu.style.display = "block";
+    menu.style.display = "block"
     contacts.style.margin = "70% 0px 0px 0px"
   }
 }
 
 function send_message() {
-  // <div class="message-container">
-  // <div class="message-friend">
-  var message_container = document.getElementsByClassName("message-container")[0];
-  var message = document.getElementsByClassName("message-friend")[0];
+  var message_container = document.getElementsByClassName("message-container")[0]
+  var message = document.getElementsByClassName("message-friend")[0]
   message = message.cloneNode(true)
 
-  var input = document.getElementById('input2')  
-  
+  var input = document.getElementById('input2')
 
-  var message_content = message.getElementsByClassName('message')[0];  
+
+  var message_content = message.getElementsByClassName('message')[0]
   message_content.textContent = input.value
   input.value = ''
 
@@ -31,13 +29,19 @@ function send_message() {
   message_sender.textContent = 'You'
 
   var message_time = message.getElementsByClassName('message-time')[0]
-  message_time.textContent = 'You'
-
-
+  var d = new Date(Date.now())
+  let time = new Intl.DateTimeFormat('en', { hour: '2-digit', minute: 'numeric', hour12: false }).format(d)
+  let mo = new Intl.DateTimeFormat('en', { month: 'short' }).format(d)
+  let da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d)
+  message_time.textContent = `${da} ${mo} ${time}`
 
   message_container.insertAdjacentElement('beforeend', message)
 
   message_container.scroll(0, message_container.scrollHeight)
-  return false;
+  return false
 }
 
+function add_symbol(symbol) {
+  var input = document.getElementById('input2')
+  input.value += symbol
+}
