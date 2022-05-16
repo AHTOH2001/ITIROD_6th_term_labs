@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <title>Telegram Web</title>
     <link rel="stylesheet" href="css/room.css">
-    <script src="js/room.js"></script>
 </head>
 
 <body>
@@ -16,8 +15,8 @@
 
             <div class="menu" id="menu">
                 <h1 class="telegram-text">Telegram</h1>
-                <div class="menu-btn" id="menu-btn">
-                    <span class="btn-line" onclick="myFunction()"></span>
+                <div class="menu-btn" id="menu-btn" onclick="toggle_menu()">
+                    <span class="btn-line"></span>
                 </div>
 
                 <span class="menu-list" id="menu-list">
@@ -45,7 +44,7 @@
                     </ul>
                 </span>
 
-            </div>            
+            </div>
             <div class="contacts">
                 <div class="contact">
                     <img class="contactimg" src="./image/pavel.jpg" alt="pavel">
@@ -97,7 +96,7 @@
 
 
 
-            <form id="control-chat">
+            <form id="control-chat" onsubmit="return send_message()">
                 <div id="chatinput">
                     <input id="input2" type="textarea" name="message" placeholder="Write a message..." size="51"
                         autocomplete="off" required>
@@ -147,7 +146,8 @@
         </div>
 
     </div>
-
+    <button onclick="send_message()">CLICK!</button>
+    <script src="js/room.js"></script>    
 </body>
 
 </html>
