@@ -2,6 +2,8 @@
 
 ### This project is a clone of the telegram messager without using bootstrap and any js frameworks
 
+#### Heroku deploy: http://itirod.herokuapp.com/
+
 ## Mock ups of the project:
 
 Sign in page: 
