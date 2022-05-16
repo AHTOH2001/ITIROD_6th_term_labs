@@ -1,18 +1,30 @@
+function sign_in() {
+  var input = document.getElementById("name-input")
+  var username = input.value
 
-// db.collection("users").add({
-//   first: "AdaNEW",
-//   last: "Lovelace",
-//   born: 1815
-// })
-//   .then((docRef) => {
-//     console.log("Document written with ID: ", docRef.id);
-//   })
-//   .catch((error) => {
-//     console.error("Error adding document: ", error);
-//   });
+  db.collection("users").doc(username).get().then((doc) => {
+    if (doc.exists) {
+      console.log("Document data:", doc.data());
+      localStorage.setItem('username', username);
+      window.location.replace('room.html');
+    } else {
+      console.log("No such user!");
+      alert(`New user with nickname ${username} has been created`)
+      db.collection("users").doc(username).set({
 
-  db.collection("users").get().then((querySnapshot) => {
-    querySnapshot.forEach((doc) => {
-        console.log(`${doc.id} => ${JSON.stringify(doc.data())}`);
-    });
-});
+      })
+        .then(() => {
+          console.log("User successfuly created");
+          localStorage.setItem('username', username);
+          window.location.replace('room.html');
+        })
+        .catch((error) => {
+          console.error("Error creating user: ", error);
+        });
+    }
+  }).catch((error) => {
+    console.log("Error getting user:", error);
+  });
+
+  return false
+}

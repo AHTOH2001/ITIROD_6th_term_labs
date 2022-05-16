@@ -1,5 +1,4 @@
-// import { db } from './firebase.js'
-// import { collection, addDoc, getDocs  } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-firestore.js"; 
+let username = localStorage.getItem('username')
 
 function toggle_menu() {
   var menu = document.getElementById("menu-list")
@@ -29,7 +28,7 @@ function send_message() {
   message_image.setAttribute('src', './image/sticker.png')
 
   var message_sender = message.getElementsByClassName('message-name')[0]
-  message_sender.textContent = 'You'
+  message_sender.textContent = username
 
   var message_time = message.getElementsByClassName('message-time')[0]
   var d = new Date(Date.now())
