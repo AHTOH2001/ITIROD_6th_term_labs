@@ -1,3 +1,6 @@
+// import { db } from './firebase.js'
+// import { collection, addDoc, getDocs  } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-firestore.js"; 
+
 function toggle_menu() {
   var menu = document.getElementById("menu-list")
   var contacts = document.getElementsByClassName("contacts")[0]
