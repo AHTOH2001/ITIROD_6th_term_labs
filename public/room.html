@@ -11,7 +11,7 @@
 
     <div class="container">
 
-        <div class="left">
+        <aside class="left">
 
             <div class="menu" id="menu">
                 <h1 class="telegram-text">Telegram</h1>
@@ -19,49 +19,57 @@
                     <span class="btn-line"></span>
                 </div>
 
-                <span class="menu-list" id="menu-list">
-                    <ul>
-                        <li class="listsame">
-                            <a>New group</a>
+                <ul class="menu-list" id="menu-list">
+                    <li class="listsame">
+                        <a>
                             <img class="listimg1" src="./image/new_group.png" alt="">
-                        </li>
-                        <li class="listsame">
-                            <a>Contacts</a>
+                            New group
+                        </a>
+                    </li>
+                    <li class="listsame">
+                        <a>
                             <img class="listimg2" src="./image/contacts.png" alt="">
-                        </li>
-                        <li class="listsame">
-                            <a>Settings</a>
+                            Contacts
+                        </a>
+                    </li>
+                    <li class="listsame">
+                        <a>
                             <img class="listimg3" src="./image/settings.png" alt="">
-                        </li>
-                        <li class="listsame">
-                            <a>Telegram FAQ</a>
+                            Settings
+                        </a>
+                    </li>
+                    <li class="listsame">
+                        <a>
                             <img class="listimg4" src="./image/faq.png" alt="">
-                        </li>
-                        <li class="listsame">
-                            <a>About</a>
+                            Telegram FAQ
+                        </a>
+                    </li>
+                    <li class="listsame">
+                        <a>
                             <img class="listimg5" src="./image/about.png" alt="">
-                        </li>
-                    </ul>
-                </span>
+                            About
+                        </a>
+                    </li>
+                </ul>
 
             </div>
-            <div class="contacts">
+            <section class="contacts">
                 <div class="contact">
                     <img class="contactimg" src="./image/pavel.jpg" alt="pavel">
                     <span class="contactname">Pavel Durov</span>
-                    <span class="contacttime">12:41:23 PM</span>
+                    <datetime class="contacttime">12:41:23 PM</datetime>
                     <span class="contacttext">
                         Welcome to Telegram
                     </span>
                 </div>
 
 
-            </div>
+            </section>
 
-        </div>
+        </aside>
 
 
-        <div class="right">
+        <main class="right">
             <div class="navright">
                 <div class="divider"></div>
                 <div class="nav-right">
@@ -85,7 +93,7 @@
 
                     <span class="img-main"><img class="message-img" src="./image/pavel.jpg" alt="pavel"></span>
                     <span class="message-name">Pavel Durov</span>
-                    <span class="message-time">17 Oct 12:41</span>
+                    <datetime class="message-time">17 Oct 12:41</datetime>
                     <div class="message">
                         Congratulations! You are my favorite student.
                     </div>
@@ -143,7 +151,7 @@
             </form>
 
 
-        </div>
+        </main>
 
     </div>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>

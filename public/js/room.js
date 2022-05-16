@@ -42,7 +42,7 @@ function toggle_menu() {
     contacts.style.margin = "0"
   } else {
     menu.style.display = "block"
-    contacts.style.margin = "70% 0px 0px 0px"
+    contacts.style.margin = "65% 0px 0px 0px"
   }
 }
 
